@@ -1,6 +1,41 @@
-# Budget Planner for iPhone
+# Budget Planner
 
-A personal budget planner built natively with **Swift and SwiftUI** for iOS 17+. It's designed for Australians: amounts are in AUD, dates are dd/mm/yyyy, weeks start on Monday, and the categories match everyday Australian costs (rent, Opal/Myki, NBN, Centrelink and so on).
+A simple, private personal budget planner for Australians (AUD, dd/mm/yyyy, Monday weeks, local expense categories).
+
+There are two versions in this repository:
+
+| | **Web app** (`docs/`) – recommended | **Native iOS app** (`BudgetPlanner/`) |
+| --- | --- | --- |
+| Install | Open a link in Safari → *Add to Home Screen* | Needs a Mac with Xcode |
+| Cost | Free (GitHub Pages) | Free for 7-day installs, or $149/yr developer account |
+| Works offline | Yes | Yes |
+| Bill reminders | Via your phone's Calendar (one tap to add) | Built-in notifications |
+| Face ID lock, widget | No | Yes |
+
+## Web app – use it on your phone
+
+**One-time setup (2 minutes, on any computer or your phone's browser):**
+
+1. Go to the repository on GitHub → **Settings** → **Pages**.
+2. Under **Build and deployment**, set **Source** to *Deploy from a branch*.
+3. Choose the branch with this code and the **`/docs`** folder, then **Save**.
+4. After a minute the page shows your link, e.g. `https://<your-username>.github.io/budget-planner/`.
+
+**On your iPhone:**
+
+1. Open the link in **Safari**.
+2. Tap the **Share** button → **Add to Home Screen** → **Add**.
+3. Open *Budget* from your Home Screen. It runs full-screen like an app and works offline.
+
+**Your data:** everything you enter is stored only in your phone's browser. The website itself contains no personal data and never sends anything anywhere. Make a backup from *Settings → Back up all data* now and then – if you delete the Home Screen app or clear Safari's website data, the data is removed. Using it from the Home Screen icon (not a Safari tab) also stops iOS from clearing it after a period of not using it.
+
+**Run it locally:** `python3 -m http.server --directory docs` and open http://localhost:8000. Run the calculation tests with `npm test` (Node 18+).
+
+---
+
+## Native iOS app (SwiftUI)
+
+The native app is built with **Swift and SwiftUI** for iOS 17+. It's designed for Australians: amounts are in AUD, dates are dd/mm/yyyy, weeks start on Monday, and the categories match everyday Australian costs (rent, Opal/Myki, NBN, Centrelink and so on).
 
 The app is built to answer five questions at any time:
 
